@@ -54,3 +54,11 @@ function cloneShip<ShipType extends Ship>(ship: ShipType, newName: string, newPi
   // copy1 é do tipo Ship e copy2 do tipo Fighter
   const copy1 = cloneShip(falcon, 'Milano', 'Peter')
   const copy2 = cloneShip(xWing, 'Black One', 'Poe')
+
+  interface EnemyShip{
+    name:string,
+    pilot:string,
+    flag?:string
+  }
+
+  const enemyship1 = cloneShip<EnemyShip>(falcon, 'enemy', 'enemy')
